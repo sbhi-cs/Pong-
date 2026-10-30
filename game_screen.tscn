@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://copiagm43ia6g"]
+
+[ext_resource type="PackedScene" uid="uid://de78u6sepvyir" path="res://ball.tscn" id="1_aybt7"]
+[ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="2_viusa"]
+[ext_resource type="Script" uid="uid://csu218kreh1ja" path="res://playerpaddle.gd" id="3_o17u5"]
+[ext_resource type="Script" uid="uid://enax4mp7akgn" path="res://enemypaddle.gd" id="4_u10x5"]
+[ext_resource type="PackedScene" uid="uid://buh7diarn0uee" path="res://wall.tscn" id="5_pgvsy"]
+[ext_resource type="PackedScene" uid="uid://bveo2xstwswp0" path="res://midboundary.tscn" id="6_1r444"]
+[ext_resource type="FontFile" uid="uid://bjtknksgwpdf6" path="res://Porto_Buena.otf" id="7_n5qm3"]
+[ext_resource type="Script" uid="uid://yvd0r8kv371j" path="res://player_score.gd" id="8_epp8g"]
+[ext_resource type="Script" uid="uid://bpgi1d25xwto" path="res://enemy_score.gd" id="9_35q4h"]
+[ext_resource type="Script" uid="uid://pn7dgo2lmtg2" path="res://winlabel.gd" id="10_pdgdj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1dm5"]
+font = ExtResource("7_n5qm3")
+font_size = 144
+
+[sub_resource type="LabelSettings" id="LabelSettings_t2epj"]
+font = ExtResource("7_n5qm3")
+font_size = 108
+
+[node name="GameScreen" type="Node2D" unique_id=298354963]
+position = Vector2(0, 275)
+
+[node name="Ball" parent="." unique_id=88753702 instance=ExtResource("1_aybt7")]
+
+[node name="playerpaddle" parent="." unique_id=557317478 instance=ExtResource("2_viusa")]
+position = Vector2(92, 30)
+script = ExtResource("3_o17u5")
+
+[node name="enemypaddle" parent="." unique_id=880623217 instance=ExtResource("2_viusa")]
+position = Vector2(1219, 102)
+script = ExtResource("4_u10x5")
+
+[node name="topboundary" parent="." unique_id=1030414514 instance=ExtResource("5_pgvsy")]
+position = Vector2(640, 522)
+
+[node name="bottomboundary" parent="." unique_id=587797327 instance=ExtResource("5_pgvsy")]
+position = Vector2(640, -271)
+
+[node name="midpoint" parent="." unique_id=696894495 instance=ExtResource("6_1r444")]
+position = Vector2(0, -275)
+
+[node name="PlayerScore" type="Label" parent="." unique_id=415112489]
+offset_left = 320.0
+offset_top = -275.0
+offset_right = 428.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 108
+text = "0"
+label_settings = SubResource("LabelSettings_q1dm5")
+script = ExtResource("8_epp8g")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnemyScore" type="Label" parent="." unique_id=1128235023]
+offset_left = 960.0
+offset_top = -275.0
+offset_right = 1068.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 108
+text = "0"
+label_settings = SubResource("LabelSettings_q1dm5")
+script = ExtResource("9_35q4h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=995335056]
+offset_left = 264.0
+offset_top = 61.0
+offset_right = 980.0
+offset_bottom = 170.0
+label_settings = SubResource("LabelSettings_t2epj")
+script = ExtResource("10_pdgdj")
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bveo2xstwswp0"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=696894495]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2085322931]
+position = Vector2(640, 50)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1157535378]
+position = Vector2(640, 150)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D3" type="Polygon2D" parent="." unique_id=869546449]
+position = Vector2(640, 250)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D4" type="Polygon2D" parent="." unique_id=583170660]
+position = Vector2(640, 350)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D5" type="Polygon2D" parent="." unique_id=1232247713]
+position = Vector2(640, 450)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D6" type="Polygon2D" parent="." unique_id=1874368678]
+position = Vector2(640, 550)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D7" type="Polygon2D" parent="." unique_id=746365766]
+position = Vector2(640, 650)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
+
+[node name="Polygon2D8" type="Polygon2D" parent="." unique_id=1590951048]
+position = Vector2(640, 750)
+color = Color(0.9843137, 1, 1, 1)
+polygon = PackedVector2Array(5, -25, -5, -25, -5, 25, 5, 25)
