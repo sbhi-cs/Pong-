@@ -9,8 +9,9 @@ It's just a basic pong game, but we all start somewhere
 I learned a lot, including the Godot UI, GDScript, and a bunch of stuff within it!
 
 ## How to access game
-
-I haven't made a GitHub Release yet so I'll update this when I make it
+Go to the Github Release page: <https://github.com/sbhi-cs/Pong-/releases/tag/v1.0>
+Follow instructions on the Release page
+Only compatible for Windows and Linux, no Mac support sorry :(
 
 ## How to play
 
@@ -22,15 +23,19 @@ There's 4 gamemodes to choose from:
 * Impossible: don't even try
 
 Your controls are:
-(Gameplay)
+Gameplay:
 * Up Arrow Key or W key (move paddle up)
 * Down Arrow Key or S key (move paddle down)
 * Shift (Make paddle faster)
 
-(UI Navigation)
+UI Navigation:
 * Enter (select mode)
 * Left Arrow Key or A key (go to option on the left)
 * Right Arrow Key or D key (go to option on the right)
+
+Shortcuts:
+* CTRL+M: Go back to main menu
+* CTRL+Q: Quit game
 
 ## Images
 <img width="651" height="573" alt="image" src="https://github.com/user-attachments/assets/2f21a1f4-4fdf-4269-8bcd-eaadee90f089" />
