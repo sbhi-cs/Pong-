@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://b76d5ck6kfnd2"]
+
+[ext_resource type="Script" uid="uid://pc6rytesg5lw" path="res://winscreen.gd" id="1_ehxyi"]
+[ext_resource type="FontFile" uid="uid://bjtknksgwpdf6" path="res://Porto_Buena.otf" id="1_h3yos"]
+[ext_resource type="Script" uid="uid://kqwpt61nfqw2" path="res://winnerlabel.gd" id="2_ehxyi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pd04t"]
+font = ExtResource("1_h3yos")
+font_size = 108
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3yos"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehxyi"]
+bg_color = Color(0.39607844, 0.05882353, 0.06666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.64705884, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd04t"]
+bg_color = Color(0.64705884, 0.18039216, 0.21176471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.64705884, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="winscreen" type="Control" unique_id=919323890]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehxyi")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=603048877]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2101023617]
+layout_mode = 2
+
+[node name="winnerlabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1135744618]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_pd04t")
+script = ExtResource("2_ehxyi")
+
+[node name="retrybutton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=376772676]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h3yos")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3yos")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ehxyi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pd04t")
+text = "RETRY"
+
+[node name="menubutton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2085331256]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h3yos")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3yos")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ehxyi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pd04t")
+text = "MAIN MENU"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/retrybutton" to="." method="_on_retrybutton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/menubutton" to="." method="_on_menubutton_pressed"]

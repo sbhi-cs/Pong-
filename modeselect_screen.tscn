@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cupsehi7fyifi"]
+
+[ext_resource type="FontFile" uid="uid://bjtknksgwpdf6" path="res://Porto_Buena.otf" id="1_cglnh"]
+[ext_resource type="Script" uid="uid://b1twfdy7842aq" path="res://modeselect_screen.gd" id="1_dug3n"]
+[ext_resource type="Script" uid="uid://3cyl41q25v87" path="res://modelabel.gd" id="2_dug3n"]
+[ext_resource type="Script" uid="uid://dfuyy4ucpfsph" path="res://modedesc.gd" id="4_wsvli"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1gqpt"]
+font = ExtResource("1_cglnh")
+font_size = 108
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gqpt"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eljyk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqk0y"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eljyk"]
+font = ExtResource("1_cglnh")
+font_size = 36
+
+[node name="modeselect_screen" type="Control" unique_id=1641205476]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 800.0
+script = ExtResource("1_dug3n")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=45510901]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=114516321]
+layout_mode = 2
+
+[node name="selectnodetitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=976918971]
+layout_mode = 2
+text = "SELECT MODE"
+label_settings = SubResource("LabelSettings_1gqpt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=735075001]
+layout_mode = 2
+alignment = 1
+
+[node name="arrow1" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=381102250]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cglnh")
+theme_override_font_sizes/font_size = 108
+theme_override_styles/normal = SubResource("StyleBoxFlat_1gqpt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eljyk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xqk0y")
+text = "< "
+
+[node name="modetext" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=2142718200]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cglnh")
+theme_override_font_sizes/font_size = 108
+theme_override_styles/normal = SubResource("StyleBoxFlat_1gqpt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eljyk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xqk0y")
+script = ExtResource("2_dug3n")
+
+[node name="arrow2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1229562154]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_cglnh")
+theme_override_font_sizes/font_size = 108
+theme_override_styles/normal = SubResource("StyleBoxFlat_1gqpt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eljyk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xqk0y")
+text = " >"
+
+[node name="modedesc" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1390650991]
+layout_mode = 2
+text = "this will have desc of each gamemode"
+label_settings = SubResource("LabelSettings_eljyk")
+horizontal_alignment = 1
+script = ExtResource("4_wsvli")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/arrow1" to="CenterContainer/VBoxContainer/HBoxContainer/modetext" method="_on_leftarrow_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/arrow1" to="CenterContainer/VBoxContainer/modedesc" method="_on_leftarrow_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/modetext" to="." method="_on_modetext_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/modetext" to="CenterContainer/VBoxContainer/HBoxContainer/modetext" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/arrow2" to="CenterContainer/VBoxContainer/HBoxContainer/modetext" method="_on_rightarrow_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/arrow2" to="CenterContainer/VBoxContainer/modedesc" method="_on_rightarrow_pressed"]

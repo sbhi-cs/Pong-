@@ -1,4 +1,7 @@
 [gd_scene format=3 uid="uid://b821myv7hqira"]
 
+[ext_resource type="PackedScene" uid="uid://ccrwbkpihrbrv" path="res://main_screen.tscn" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=1937248456]
-position = Vector2(0, 275)
+
+[node name="main_menu" parent="." unique_id=1309086608 instance=ExtResource("1_ig7tw")]

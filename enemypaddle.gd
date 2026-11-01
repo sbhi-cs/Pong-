@@ -1,28 +1,41 @@
 extends CharacterBody2D
 
-
-var speed = 300.0
+var speed = 125
 var yboundarymin = global_position.y - 100
 var yboundarymax = global_position.y + 100
 @onready var ball_node = get_node_or_null("../Ball")
 
 func _ready():
 	global_position = Vector2(1220, 400)
-	print(ball_node)
+	
+	match Global.mode:
+		
+		"EASY":
+			speed = 125
+		"MEDIUM":
+			speed = 250
+		"HARD":
+			speed = 450
+		"IMPOSSIBLE":
+			speed = 1000
+	velocity.y = speed
 
 func _physics_process(delta: float) -> void:
-	
 	if ball_node.velocity.x < 0: # moves code back to middle if ball is going opp way from enemy (toward player)
 		velocity.y = 0
 		if global_position.y > 400:
-			velocity.y = -175
+			velocity.y = -speed
 		elif global_position.y < 400:
-			velocity.y = 175
+			velocity.y = speed
 	
 	elif ball_node.global_position.y < yboundarymin:
-		velocity.y = -200
+		velocity.y = -speed
 	elif ball_node.global_position.y > yboundarymax:
-		velocity.y = 200
+		velocity.y = speed
+	elif yboundarymin < ball_node.global_position.y && ball_node.global_position.y < global_position.y:
+		velocity.y = -speed/2
+	elif yboundarymax > ball_node.global_position.y && ball_node.global_position.y > global_position.y:
+		velocity.y = speed/2
 	else:
 		velocity.y = 0
 	

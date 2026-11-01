@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://copiagm43ia6g"]
 
 [ext_resource type="PackedScene" uid="uid://de78u6sepvyir" path="res://ball.tscn" id="1_aybt7"]
+[ext_resource type="Script" uid="uid://cg3m7b53qsmye" path="res://game_screen.gd" id="1_viusa"]
 [ext_resource type="PackedScene" uid="uid://d4j7xe1qi3tfu" path="res://paddle.tscn" id="2_viusa"]
 [ext_resource type="Script" uid="uid://csu218kreh1ja" path="res://playerpaddle.gd" id="3_o17u5"]
 [ext_resource type="Script" uid="uid://enax4mp7akgn" path="res://enemypaddle.gd" id="4_u10x5"]
@@ -21,6 +22,7 @@ font_size = 108
 
 [node name="GameScreen" type="Node2D" unique_id=298354963]
 position = Vector2(0, 275)
+script = ExtResource("1_viusa")
 
 [node name="Ball" parent="." unique_id=88753702 instance=ExtResource("1_aybt7")]
 
@@ -63,7 +65,7 @@ label_settings = SubResource("LabelSettings_q1dm5")
 script = ExtResource("9_35q4h")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="." unique_id=995335056]
+[node name="winlabel" type="Label" parent="." unique_id=995335056]
 offset_left = 264.0
 offset_top = 61.0
 offset_right = 980.0

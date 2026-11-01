@@ -13,7 +13,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if pscore >= 7:
-		playerwin.emit()
+		if Global.mode == "IMPOSSIBLE":
+			Global.winner = "HOW"
+			playerwin.emit()
+		else:
+			Global.winner = "PLAYER"
+			playerwin.emit()
 	
 func _increment_player_points():
 	pscore += 1

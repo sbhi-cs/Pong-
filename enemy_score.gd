@@ -12,7 +12,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if escore >= 7:
-		enemywin.emit()
+		if Global.mode == "IMPOSSIBLE":
+			Global.winner = "STOP TRYING"
+			enemywin.emit()
+		else:
+			Global.winner = "ENEMY"
+			enemywin.emit()
 
 func _increment_enemy_points():
 	escore += 1
