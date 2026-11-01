@@ -63,7 +63,9 @@ text = "↑/W = UP
 SHIFT = INCREASE SPEED
 ENTER = ACCEPT 
 ← = GO TO PREV OPTION
-→ = GO TO NEXT OPTION"
+→ = GO TO NEXT OPTION
+CTRL+M = GO TO MAIN MENU
+CTRL+Q = QUIT GAME"
 label_settings = SubResource("LabelSettings_1gqpt")
 
 [node name="buttoncentering" type="CenterContainer" parent="." unique_id=1010945413]

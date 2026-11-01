@@ -8,7 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit(0)
 
 
 func _on_playbutton_pressed() -> void:

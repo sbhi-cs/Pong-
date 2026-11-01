@@ -28,6 +28,7 @@ func _ready():
 
 	velocity = Vector2(speed-100, speed-100) #starting ball speed
 func _physics_process(delta: float) -> void:
+	
 	if global_position.x < 0:
 		enemyscore.emit()
 		speed = speedconst
