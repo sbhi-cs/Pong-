@@ -6,7 +6,7 @@ This is my pong game, created with Godot!
 
 This project is my first project on Godot ever!
 It's just a basic pong game, but we all start somewhere
-I learned a lot, including the Godot UI, GDScript, and a bunch of stuff within it!
+I learned a lot, including the Godot UI, GDScript, how to make UI for my games, and a bunch of stuff within it!
 
 ## How to access game
 Go to the Github Release page: <https://github.com/sbhi-cs/Pong-/releases/tag/v1.0>
@@ -16,11 +16,6 @@ Only compatible for Windows and Linux, no Mac support sorry :(
 ## How to play
 
 It's just simple pong, hit the ball to the other side, and try to get it past the opponents paddle!
-There's 4 gamemodes to choose from:
-* Easy: It's really easy
-* Medium: Average difficulty, recommended to play
-* Hard: Harder, but still very possible
-* Impossible: don't even try
 
 Your controls are:
 Gameplay:
@@ -36,6 +31,23 @@ UI Navigation:
 Shortcuts:
 * CTRL+M: Go back to main menu
 * CTRL+Q: Quit game
+
+## Gamemodes
+Easy:
+* Feels like you're playing in slo-mo
+* Boring
+
+Medium:
+* Standard gameplay
+* For the normiest of normies
+
+Hard: 
+* A bit difficult, but manageable to win once you get the hang of it
+* My person favorite
+* Fun as hell
+
+???:
+* Don't even try.
 
 ## Images
 <img width="651" height="573" alt="image" src="https://github.com/user-attachments/assets/2f21a1f4-4fdf-4269-8bcd-eaadee90f089" />
